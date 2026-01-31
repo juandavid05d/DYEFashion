@@ -1,0 +1,16 @@
+.detalle {
+  padding: 40px;
+  display: flex;
+  gap: 40px;
+}
+
+.detalle img {
+  width: 300px;
+  border-radius: 10px;
+}
+
+.info select {
+  display: block;
+  margin: 10px 0;
+  padding: 6px;
+}

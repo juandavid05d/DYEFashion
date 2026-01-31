@@ -1,0 +1,17 @@
+.hero {
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 40px;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  max-width: 600px;
+}
+
+.hero p {
+  margin: 15px 0;
+  color: #cccccc;
+}
