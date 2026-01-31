@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Tienda | Raíz Urbana</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <header class="header">
+    <div class="logo">Raíz Urbana</div>
+    <nav class="nav">
+      <a href="index.html">Inicio</a>
+      <a href="#">Hombre</a>
+      <a href="#">Mujer</a>
+      <button id="cart-button" class="cart-btn" aria-label="Abrir carrito">🛒 <span id="cart-count" class="cart-count">0</span></button>
+    </nav>
+  </header>
+
+  <main class="catalogo">
+    <h2>Nuestra colección</h2>
+
+    <!-- AQUÍ JS VA A INYECTAR LOS PRODUCTOS -->
+    <section class="productos" id="productos"></section>
+  </main>
+
+  <!-- JS SIEMPRE ABAJO -->
+
+  <!-- Modal de vista previa del carrito (compartido) -->
+  <div id="cart-modal" class="cart-modal" aria-hidden="true" style="display:none;">
+    <div class="cart-overlay"></div>
+    <div class="cart-panel">
+      <button id="cart-close" class="cart-close" aria-label="Cerrar">✖</button>
+      <h3>Carrito</h3>
+      <div id="cart-items" class="cart-items"></div>
+      <div class="cart-footer">
+        <div class="cart-total">Total: <span id="cart-total">$0</span></div>
+        <button id="checkout-btn" class="btn">Ir a pagar</button>
+      </div>
+    </div>
+  </div>
+
+  <style>
+    /* Estilos mínimos para el modal */
+    .cart-modal .cart-overlay{
+      position:fixed; inset:0; background:rgba(0,0,0,0.4);
+    }
+    .cart-modal .cart-panel{
+      position:fixed; right:20px; top:60px; width:320px; max-height:80vh; overflow:auto; background:#fff; padding:16px; box-shadow:0 4px 18px rgba(0,0,0,0.2); border-radius:8px; z-index:1000;
+    }
+    .cart-close{ float:right; background:transparent; border:none; font-size:16px; cursor:pointer }
+    .cart-items .cart-row{ display:flex; gap:8px; align-items:center; padding:8px 0; border-bottom:1px solid #eee }
+    .cart-items img{ width:50px; height:50px; object-fit:cover }
+    .cart-count{ background:#ff3b3b; color:#fff; border-radius:50%; padding:2px 7px; font-size:12px; margin-left:6px }
+    .cart-footer{ display:flex; justify-content:space-between; align-items:center; margin-top:12px }
+  </style>
+
+  <script src="scripts.js/script.js"></script>
+</body>
+</html>
